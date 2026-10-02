@@ -13,10 +13,23 @@ export default function Signup() {
     <Text style={styles.title}>Dayo</Text>
     <Text style={styles.tagline}>Show up everyday.</Text>
 
-    <TextInput
+    <TextInput style={styles.input}
       value={name}
       onChangeText={setName}
-      placeholder="Full name"
+      placeholder="Tobi Ade"
+    />
+
+    <TextInput style={styles.input}
+      value={email}
+      onChangeText={setEmail}
+      placeholder="tobi@example.com"
+    />
+
+    <TextInput style={styles.input}
+      value={password}
+      onChangeText={setPassword}
+      placeholder="********"
+      secureTextEntry={true}
     />
 
   </View>
@@ -29,15 +42,37 @@ const styles = StyleSheet.create({
     backgroundColor: "#000000",
     justifyContent: "center",
     padding: 24,
-    alignItems: "center"
+    alignItems: "stretch"
   },
   title: {
     fontSize: 32,
+    marginBottom: 8,
     fontWeight: "bold",
     color: "#ffffff",
+    fontFamily: "sans-serifs",
+
   },
   tagline: {
     fontSize: 16,
-    color: "#a1a1a1"
+    color: "#a1a1a1",
+    marginBottom: 32,
+
+  },
+  input: {
+    backgroundColor: "#111111",
+    color: "#ffffff",
+    borderWidth: 1,
+    borderColor: "#333333",
+    padding: 13,
+    marginBottom: 30,
+    borderRadius: 12,
+
+
+
+
+
+
   }
+
+
 });
