@@ -1,11 +1,26 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TextInput, KeyboardAvoidingView, ScrollView } from "react-native";
+import { useState } from "react";
 
 export default function Signup() {
+  const [name, setName] = useState("");
+
+  const [email, setEmail] = useState("");
+
+  const [password, setPassword] = useState("");
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Dayo</Text>
-    </View>
-  );
+  <View style={styles.container}>
+    <Text style={styles.title}>Dayo</Text>
+    <Text style={styles.tagline}>Show up everyday.</Text>
+
+    <TextInput
+      value={name}
+      onChangeText={setName}
+      placeholder="Full name"
+    />
+
+  </View>
+);
 }
 
 const styles = StyleSheet.create({
@@ -21,4 +36,8 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#ffffff",
   },
+  tagline: {
+    fontSize: 16,
+    color: "#a1a1a1"
+  }
 });
