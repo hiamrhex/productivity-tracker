@@ -1,9 +1,9 @@
-import { Text, View, StyleSheet } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 
-export default function Index() {
+export default function Signup() {
   return (
     <View style={styles.container}>
-      <Text>Edit src/app/index.tsx to edit this screen.</Text>
+      <Text style={styles.title}>Dayo</Text>
     </View>
   );
 }
@@ -11,7 +11,14 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
+    backgroundColor: "#000000",
     justifyContent: "center",
+    padding: 24,
+    alignItems: "center"
+  },
+  title: {
+    fontSize: 32,
+    fontWeight: "bold",
+    color: "#ffffff",
   },
 });
