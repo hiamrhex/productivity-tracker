@@ -11,8 +11,10 @@ export default function Signup() {
 
   return (
   <View style={styles.container}>
-    <MaterialCommunityIcons name="fire" size={48} color="#ffffff" />
-    <Text style={styles.title}>Streakable</Text>
+    <View style={{ flexDirection: "row", alignItems: "center" }}>
+      <MaterialCommunityIcons name="fire" size={48} color="#ffffff" />
+      <Text style={styles.title}>Streakable</Text>
+    </View>
     <Text style={styles.tagline}>Show up everyday.</Text>
     
     <View style={styles.card}>
