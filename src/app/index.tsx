@@ -10,9 +10,9 @@ export default function Signup() {
   const [password, setPassword] = useState("");
 
   return (
-  <View style={styles.container}>
-    <View style={{ flexDirection: "row", alignItems: "center" }}>
-      <MaterialCommunityIcons name="fire" size={48} color="#ffffff" />
+  <KeyboardAvoidingView style={styles.container}>
+    <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-start", }}>
+      <MaterialCommunityIcons name="fire" size={30} color="#ffffff" />
       <Text style={styles.title}>Streakable</Text>
     </View>
     <Text style={styles.tagline}>Show up everyday.</Text>
@@ -47,7 +47,7 @@ export default function Signup() {
         <Text>Continue</Text>
       </Pressable>
     </View>
-  </View>
+  </KeyboardAvoidingView>
 );
 }
 
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#000000",
-    justifyContent: "flex-start",
+    justifyContent: "center",
     paddingTop: 100,
     padding: 24,
     alignItems: "center",
@@ -63,11 +63,11 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 32,
-    marginBottom: 8,
     fontWeight: "bold",
     color: "#ffffff",
     fontFamily: "Geist",
     textAlign: "center",
+    marginLeft: 5,
 
   },
   tagline: {
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
     borderColor: "#222222",
     backgroundColor:"#000000",
     borderRadius: 20,
-    padding: 20,
+    padding: 16,
     marginTop: 0,
     borderCurve: "circular",
     borderWidth: 1,
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 20,
     elevation: 10,
-    width: "85%",
+    width: "40%",
 
   },
   label: {
