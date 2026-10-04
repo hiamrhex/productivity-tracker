@@ -17,6 +17,9 @@ export default function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLogin, setIsLogin] = useState(false);
+  const handleSubmit = () => {
+    console.log(name, email, password)
+};
 
   const [fontsLoaded] = useFonts({ Geist_400Regular, Geist_700Bold });
   if (!fontsLoaded) return null;
@@ -81,7 +84,7 @@ export default function Signup() {
           </Pressable>
         )}
 
-        <Pressable onPress={() => {}} style={styles.button}>
+        <Pressable onPress={handleSubmit} style={styles.button}>
           <Text style={styles.buttonText}>
             {isLogin ? "Log in" : "Continue"}
           </Text>
