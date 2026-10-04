@@ -36,7 +36,7 @@ export default function Signup() {
           {isLogin ? "Welcome back." : "Day 1."}
         </Text>
         <Text style={styles.smallTagline}>
-          {isLogin ? "Pick up your streak" : "Your streak starts now"}
+          {isLogin ? "Your streak is waiting." : "Your streak starts now."}
         </Text>
       </View>
 
