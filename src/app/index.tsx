@@ -32,7 +32,9 @@ export default function Signup() {
       </View>
 
       <View>
-        <Text style={styles.tagline}>{isLogin ? "Welcome back." : "Day 1."}</Text>
+        <Text style={styles.tagline}>
+          {isLogin ? "Welcome back." : "Day 1."}
+        </Text>
         <Text style={styles.smallTagline}>
           {isLogin ? "Pick up your streak" : "Your streak starts now"}
         </Text>
@@ -80,7 +82,9 @@ export default function Signup() {
         )}
 
         <Pressable onPress={() => {}} style={styles.button}>
-          <Text style={styles.buttonText}>{isLogin ? "Log in" : "Continue"}</Text>
+          <Text style={styles.buttonText}>
+            {isLogin ? "Log in" : "Continue"}
+          </Text>
         </Pressable>
 
         {isLogin && (
@@ -100,6 +104,19 @@ export default function Signup() {
               : "Already have an account? Log in"}
           </Text>
         </Pressable>
+        {!isLogin && (
+          <Text style={styles.legal}>
+            By continuing, you agree to our{" "}
+            <Text style={styles.legalLink} onPress={() => {}}>
+              Terms
+            </Text>{" "}
+            and{" "}
+            <Text style={styles.legalLink} onPress={() => {}}>
+              Privacy Policy
+            </Text>
+            .
+          </Text>
+        )}
       </View>
     </KeyboardAvoidingView>
   );
@@ -156,13 +173,13 @@ const styles = StyleSheet.create({
   },
   label: {
     color: "#ffffff",
-    fontFamily: "Geist_700Bold",
+    fontFamily: "Antropic-sans",
     paddingVertical: 8,
   },
   input: {
     backgroundColor: "#111111",
     color: "#ffffff",
-    fontFamily: "Geist_400Regular",
+    fontFamily: "Antropic-sans",
     borderWidth: 1,
     borderColor: "#333333",
     padding: 11,
@@ -171,7 +188,7 @@ const styles = StyleSheet.create({
   },
   forgot: {
     color: "#a1a1a1",
-    fontFamily: "Geist_400Regular",
+    fontFamily: "Antropic-sans",
     textAlign: "right",
     marginBottom: 4,
   },
@@ -184,12 +201,12 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   buttonText: {
-    fontFamily: "Geist_700Bold",
+    fontFamily: "Antropic-sans",
     color: "#000000",
   },
   or: {
     color: "#555555",
-    fontFamily: "Geist_400Regular",
+    fontFamily: "Antropic-sans",
     textAlign: "center",
     marginVertical: 12,
   },
@@ -206,12 +223,24 @@ const styles = StyleSheet.create({
   },
   googleText: {
     color: "#ffffff",
-    fontFamily: "Geist_400Regular",
+    fontFamily: "Antropic-sans",
   },
   switchText: {
     color: "#a1a1a1",
-    fontFamily: "Geist_400Regular",
+    fontFamily: "Antropic-sans",
     textAlign: "center",
     marginTop: 20,
+  },
+  legal: {
+    color: "#666666",
+    fontFamily: "Antropic-sans",
+    fontSize: 12,
+    textAlign: "center",
+    marginTop: 12,
+  },
+  legalLink: {
+    color: "#a1a1a1",
+    textDecorationLine: "underline",
+    fontFamily: "Antropic-sans",
   },
 });
