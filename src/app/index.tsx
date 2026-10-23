@@ -20,7 +20,7 @@ export default function Signup() {
   const handleSubmit = () => {
     console.log(name, email, password)
 };
-// TODO: wire up handleSubmit to AsyncStorage frooror
+// TODO: wire up handleSubmit to AsyncStorage fro
   const [fontsLoaded] = useFonts({ Geist_400Regular, Geist_700Bold });
   if (!fontsLoaded) return null;
 
